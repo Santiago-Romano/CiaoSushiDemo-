@@ -1,0 +1,69 @@
+*{box-sizing:border-box;margin:0}
+:root{color-scheme:light;--bg:#e6dccb;--red:#c8402f;--navy:#2c4558;--slate:#5f6e78;--coral:#d4806f;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 86px)}
+body{background:var(--bg);color:var(--navy);font:300 1.05rem/1.4 Kalam,'Comic Sans MS',cursive;overflow-x:hidden}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--bg);border-bottom:2px solid var(--coral);display:flex;align-items:center;gap:16px;padding:8px 16px}
+.logo{width:66px;height:66px;border-radius:50%;flex:none;display:block}
+nav{display:flex;gap:4px 18px;overflow-x:auto;white-space:nowrap;font-size:1.1rem;padding:4px 0}
+nav a{color:var(--navy);text-decoration:none;font-weight:700}
+nav a:hover,nav a:focus-visible{color:var(--red);outline:none}
+nav a.lib{color:var(--red)}
+main{max-width:1000px;margin:auto;padding:0 18px}
+section{padding:0 0 24px;position:relative}section+section::before,#entradas::before{content:'';display:block;height:46px;margin:56px 0 40px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='110' height='46'%3E%3Cg fill='none' stroke='%235f6e78' stroke-width='3' stroke-linecap='round'%3E%3Cpath d='M6 14q10-10 20 0M44 32q10-10 20 0M70 12q10-9 20 0M16 38q8-6 16 0M84 36q8-6 16 0'/%3E%3C/g%3E%3C/svg%3E") repeat-x center}
+.hero{padding:56px 0 24px;position:relative}
+.hero h1{font:400 clamp(3.6rem,15vw,7.5rem)/.95 'Mr Dafoe',cursive;color:var(--red)}
+.hero p{max-width:440px;margin:14px 0 20px;font-size:1.15rem}
+.btn{display:inline-block;background:var(--navy);color:var(--bg);padding:8px 22px;text-decoration:none;font-weight:700;margin:0 8px 8px 0}
+.btn.o{background:none;color:var(--red);border:2px solid var(--red)}
+.dec{position:absolute;pointer-events:none}
+.ttl{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:18px;background:linear-gradient(var(--coral),var(--coral)) left bottom 14px/55% 7px no-repeat}
+h2{font:400 clamp(3rem,10vw,5rem)/1.05 'Mr Dafoe',cursive;color:var(--navy);padding-right:10px}
+h2.r{color:var(--red)}
+h3{font:400 clamp(1.9rem,5vw,2.7rem)/1.1 'Mr Dafoe',cursive;color:var(--navy);margin:34px 0 10px;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+h3 small,.sub{font:300 .85rem Kalam,cursive;letter-spacing:.12em;color:var(--slate)}
+.jp{color:var(--red);font-size:.95rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px 34px}
+.n{display:flex;justify-content:space-between;gap:10px;align-items:baseline;color:var(--red);font-size:1.3rem;line-height:1.2}
+.it p{font-size:.95rem}
+.pr{color:var(--navy);font-style:italic;white-space:nowrap;font-size:1.05rem}
+.nd{color:var(--slate);font-size:.78rem;letter-spacing:.06em;white-space:nowrap}
+.it.off .n>span:first-child{opacity:.55}.it.off p{opacity:.55}
+.ic{width:17px;height:17px;stroke:var(--slate);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;vertical-align:-2px;margin-left:5px}
+.box{padding:20px 24px;color:#f8efe4}.box.c{background:var(--coral)}.box.s{background:var(--slate)}
+.box .n,.box .pr{color:#fff}.box .ic{stroke:#f8efe4}
+.box h3{color:#fff;margin-top:0}
+.note{border:1.5px solid var(--red);color:var(--red);padding:14px 18px;text-align:center;max-width:440px;margin:28px auto 0}
+.leg{display:flex;gap:6px 22px;flex-wrap:wrap;font-size:.95rem;margin:4px 0 16px}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+.band{background:var(--coral);color:#fff;padding:6px 16px;margin:26px 0 12px;display:flex;gap:6px 18px;flex-wrap:wrap;align-items:baseline}
+.band b{font:400 2rem 'Mr Dafoe',cursive}
+.tabs{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px 26px}
+.tab b{display:block;color:var(--navy);font-size:1.05rem}.tab .pr{font-weight:700;font-size:1.2rem;color:var(--navy)}
+.tab span{display:block;font-size:.92rem;margin-bottom:2px}
+.chips span{display:inline-block;border:1.5px solid var(--coral);padding:2px 13px;margin:4px 4px 4px 0;border-radius:20px;color:var(--red);background:#ede4d5}
+.rice{height:46px;margin-top:40px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='110' height='46'%3E%3Cg fill='none' stroke='%235f6e78' stroke-width='3' stroke-linecap='round'%3E%3Cpath d='M6 14q10-10 20 0M44 32q10-10 20 0M70 12q10-9 20 0M16 38q8-6 16 0M84 36q8-6 16 0'/%3E%3C/g%3E%3C/svg%3E") repeat-x center}
+
+.mt{margin-top:18px}
+@media(max-width:560px){.dec{opacity:.35}.logo{width:56px;height:56px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+.nos{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:26px;align-items:start}
+
+footer{background:var(--slate);color:#f3e9dc;padding:36px 18px 28px;margin-top:40px}
+.fgrid{max-width:1000px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:24px 34px}
+footer h4{font:400 2rem 'Mr Dafoe',cursive;color:#fff;margin-bottom:4px}
+footer a{color:#fff;font-weight:700}
+footer .sm{font-size:.88rem;opacity:.85;margin-top:6px}
+footer .copy{text-align:center;font-size:.85rem;margin-top:28px;padding-top:16px;border-top:1px solid rgba(255,255,255,.3)}
+
+.txt{position:relative;border:1.5px solid var(--red);padding:26px 24px 8px;background:#ede4d5}
+.txt::before{content:'';position:absolute;inset:6px;border:1px solid var(--coral);pointer-events:none}
+.txt p{margin-bottom:14px;position:relative}
+.txt .lead{font-size:1.25rem;color:var(--red);font-weight:400}
+.hanko{float:right;margin:0 0 8px 14px;background:var(--red);color:#f3e9dc;font:400 .95rem/1.05 'Mr Dafoe',cursive;padding:8px 10px;text-align:center;transform:rotate(6deg);position:relative}
+.ph{display:grid;grid-template-columns:1fr 1fr;gap:20px 16px}
+.ph figure{margin:0}
+.ph img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block;border:2px solid var(--navy);box-shadow:6px 6px 0 var(--coral)}
+.ph figure:nth-child(even){margin-top:22px}
+.ph figcaption{margin-top:10px;font-size:.88rem;color:var(--slate)}
+.ph figcaption .jp{font-size:1.05rem;margin-right:4px}
